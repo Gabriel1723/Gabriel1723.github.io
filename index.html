@@ -2,14 +2,50 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <title>Min Första Webbsida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteövningar</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>Sida för matteövningar</h1>
-    <h2></h2>
-    <p>Detta är en enkel webbsida utan stil.</p>
-    <a href="#">Klicka här för att läsa mer</a>
+    <header>
+        <h1>Matteövningar</h1>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>Välkommen till matteövningarna</h2>
+            <p>Här kan du träna på matteövningar på olika nivåer</p>
+        </section>
+
+        <section id="övningar">
+            <h2>Matteövningar</h2>
+
+            <div class="övning">
+                <img src="Bilder\placeholder.png" alt="Bild">
+                <p>Vad är 5 + 3?</p>
+                <input type="number" id="svar1" placeholder="Skriv ditt svar här">
+                <button onclick="rättaSvar1()">Kontrollera svar</button>
+                <p id="feedback1"></p>
+            </div>
+
+            <!-- Lägg till fler övningar nedan -->
+            <div class="övning">
+                <img src="Bilder\placeholder.png" alt="Bild">
+                <p>Vad är 10 - 4?</p>
+                <input type="number" id="svar2" placeholder="Skriv ditt svar här">
+                <button onclick="rättaSvar2()">Kontrollera svar</button>
+                <p id="feedback2"></p>
+            </div>
+
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2024 Matteövningar. Alla rättigheter reserverade.</p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>

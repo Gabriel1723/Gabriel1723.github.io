@@ -1,3 +1,5 @@
-body {
-    font-size: larger;
+h1 {
+    font-size: auto;
+    margin: auto;
+    text-align: center;
 }
