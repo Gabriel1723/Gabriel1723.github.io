@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteövningar</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Område ett</h1>
+    </header>
+
+
+    <main>
+        <section id="intro">
+            <h2>Område ett</h2>
+            <p>Här en kort beskrivning av område ett</p>
+        </section>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+            </ul>
+          </nav>
+
+          <section id="övningar"> 
+            <h2>Matteövningar</h2>
+        
+            <div class="övning">
+                <img src="Bilder/placeholder.png" alt="Bild">
+                <p>Vad är 5 + 3?</p>
+                <input type="number" id="svar1-1" placeholder="Skriv ditt svar här">
+                <button id="knapp1-1" onclick="rättaSvar('svar1-1', 'feedback1-1', 8, 'knapp1-1')">Kontrollera svar</button>
+                <p id="feedback1-1"></p>
+            </div>
+        
+            <div class="övning">
+                <img src="Bilder/placeholder.png" alt="Bild">
+                <p>Vad är 10 - 4?</p>
+                <input type="number" id="svar1-2" placeholder="Skriv ditt svar här">
+                <button id="knapp1-2" onclick="rättaSvar('svar1-2', 'feedback1-2', 6, 'knapp1-2')">Kontrollera svar</button>
+                <p id="feedback1-2"></p>
+            </div>
+        
+            <div class="övning">
+                <img src="Bilder/placeholder.png" alt="Bild">
+                <p>Vad är 10 - 3?</p>
+                <input type="number" id="svar1-3" placeholder="Skriv ditt svar här">
+                <button id="knapp1-3" onclick="rättaSvar('svar1-3', 'feedback1-3', 7, 'knapp1-3')">Kontrollera svar</button>
+                <p id="feedback1-3"></p>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2024 Matteövningar. Alla rättigheter reserverade.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
