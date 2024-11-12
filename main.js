@@ -4,7 +4,7 @@ function rättaSvar(frågaId, feedbackId, rättSvar, knappId) {
     if (svar == rättSvar) {
         document.getElementById(feedbackId).innerHTML = "Rätt svar! +1 poäng";
     } else {
-        document.getElementById(feedbackId).innerHTML = "Fel svar. Försök igen.";
+        document.getElementById(feedbackId).innerHTML = "Fel svar.";
     }
     
     
