@@ -1,5 +1,44 @@
-h1 {
+header {
+    font-size: large;
+    font-weight: bolder;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: beige;
+}
+
+#intro {
     font-size: auto;
-    margin: auto;
+    margin: 10px 0% 0% 0%;
+    text-align: center;
+    background-color: aqua;
+}
+
+#övningar 
+{
+    background-color: rgb(232, 232, 255);
+    margin: 0% 0% 0% 0%;
     text-align: center;
 }
+
+.övning {
+    margin: 5% 0 0 0;
+    background-color: rgb(255, 235, 235);
+    font-size: larger;
+}
+
+/* För mobiler */
+@media (max-width: 768px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
