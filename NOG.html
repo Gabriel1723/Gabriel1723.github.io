@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOG</title>
     <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
     <header>
@@ -18,18 +21,37 @@
         <section id="intro">
             <h2>Resonemang delen</h2>
             <p>Består av 6 uppgifter, som alla presenterar ett problem följt av två påståenden. Här gäller det att avgöra om den information som påståendena ger är tillräcklig för att problemet ska kunna lösas.</p>
-            <button id="Timer" onclick="setTimeout(timerFunktion, 6000)">Börja timern</button>
+            <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
+            <h1 id="timer">120</h1>
         </section>
 
         <section id="övningar">
             <h2>Matteövningar</h2>
 
             <div class="övning">
-                <h3> Övning ett</h3>
-                <p>Vad är 40/4?</p>
-                <input type="number" id="svar3-1" placeholder="Skriv ditt svar här">
-                <button id="knapp3-1" onclick="rättaSvar('svar3-1', 'feedback3-1', 10, 'knapp3-1')">Kontrollera svar</button>
-                <p id="feedback3-1"></p>
+                <h3>Övning ett</h3>
+                <p>Till en damfotbollsmatch såldes enbart sittplatsbiljetter och ståplatsbiljetter. Hur många ståplatsbiljetter såldes om sittplatsbiljetterna kostade 80 kr styck?</p>
+                <p><strong>(1)</strong> Sammanlagt såldes biljetter för 27 220 kr.</p>
+                <p><strong>(2)</strong> Ståplatsbiljetterna var 50 kr billigare än sittplatsbiljetterna.</p>
+                <form id="nog-fraga1">
+                    <label>
+                        <input type="radio" name="svar1" value="A"> A) I (1) men ej i (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="B"> B) I (2) men ej (1)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="C"> C) I (1) tillsammans med (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="D"> D) I (1) och (2) var för sig
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="E"> E) Ej genom de båda påståendena
+                    </label><br>
+                </form>
+                <button id="nog-knapp1" onclick="rättaFlervalsSvar('nog-fraga1', 'feedback-nog1', 'C', 'nog-knapp1')">Kontrollera svar</button>
+                <p id="feedback-nog1"></p>
             </div>
 
             <!-- Lägg till fler övningar nedan -->

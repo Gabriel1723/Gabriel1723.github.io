@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DTK</title>
     <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
     <header>
@@ -17,20 +20,36 @@
         <section id="intro">
             <h2>Diagramdelen</h2>
             <p>Består av 12 uppgifter som är kopplade till olika kartor, tabeller och diagram och uppgifterna går att lösa genom att läsa av dessa samt göra diverse uträkningar.</p>
-            <button id="Timer" onclick="setTimeout(timerFunktion, 6000)">Börja timern</button>
+            <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
+            <h1 id="timer">120</h1>
         </section>
 
         <section id="övningar">
             <h2>Matteövningar</h2>
 
             <div class="övning">
-                <h3> Övning ett</h3>
-                <img src="Bilder\placeholder.png" alt="Bild">
-                <p>Vad är 450/4500?</p>
-                <input type="number" id="svar4-1" placeholder="Skriv ditt svar här">
-                <button id="knapp4-1" onclick="rättaSvar('svar4-1', 'feedback4-1', 0.1, 'knapp4-1')">Kontrollera svar</button>
-                <p id="feedback4-1"></p>
+                <h3>Övning ett</h3>
+                <img src="Bilder\DTK1.png" alt="Bild">
+                <p>Vilken av följande byggnader hade en area på cirka 40m2 och var byggd av timmer?</p>
+    
+                <form id="dtk-fraga1">
+                    <label>
+                        <input type="radio" name="svar1" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="dtk-knapp1" onclick="rättaFlervalsSvar('dtk-fraga1', 'dtk-feedback1', 'D', 'dtk-knapp1')">Kontrollera svar</button>
+                <p id="dtk-feedback1"></p>
             </div>
+                
 
             <!-- Lägg till fler övningar nedan -->
             <div class="övning">

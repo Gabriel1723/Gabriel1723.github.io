@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XYZ</title>
     <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
     <header>
@@ -19,18 +22,32 @@
         <section id="intro">
             <h2>Mattedelen</h2>
             <p>Består av 12 uppgifter som alla är mattetal där du ska ge ett exakt svar. Du har fyra svarsalternativ till varje uppgift. Du har ungefär en minut till varje uppgift.</p>
-            <button id="Timer" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
+            <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
+            <h1 id="timer">120</h1>
         </section>
 
           <section id="övningar"> 
             <h2>Matteövningar</h2>
         
             <div class="övning">
-                <h3> Övning ett</h3>
-                <p>Vad är 5 + 3?</p>
-                <input type="number" id="svar1-1" placeholder="Skriv ditt svar här">
-                <button id="knapp1-1" onclick="rättaSvar('svar1-1', 'feedback1-1', 8, 'knapp1-1')">Kontrollera svar</button>
-                <p id="feedback1-1"></p>
+                <h3>Övning ett</h3>
+                <p>Vad är \( \frac{1}{8} + \frac{3}{4} + \frac{1}{2} \)?</p>
+                <form id="fraga1">
+                    <label>
+                        <input type="radio" name="svar1" value="A"> A) \( \frac{13}{12} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="B"> B) \( \frac{9}{8} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="C"> C) \( \frac{11}{8} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="D"> D) \( \frac{5}{14} \)
+                    </label><br>
+                </form>
+                <button id="knapp1" onclick="rättaFlervalsSvar('fraga1', 'feedback1', 'C', 'knapp1')">Kontrollera svar</button>
+                <p id="feedback1"></p>
             </div>
         
             <div class="övning">

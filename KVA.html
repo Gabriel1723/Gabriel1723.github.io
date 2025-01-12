@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KVA</title>
     <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
     <header>
@@ -18,18 +21,34 @@
         <section id="intro">
             <h2>Det kvantitativa delen</h2>
             <p>Består av 10 uppgifter, som alla presenterar ett matematiskt problem och därefter två alternativa svar. Du ska bestämma vilket av alternativen som är störst, om de är lika stora eller om du inte har tillräckligt med information för att bedöma detta.</p>
-            <button id="Timer" onclick="setTimeout(timerFunktion, 6000)">Börja timern</button>
+            <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
+            <h1 id="timer">120</h1>
         </section>
 
         <section id="övningar">
             <h2>Matteövningar</h2>
 
             <div class="övning">
-                <h3> Övning ett</h3>
-                <p>Vad är 44 + 6?</p>
-                <input type="number" id="svar2-1" placeholder="Skriv ditt svar här">
-                <button id="knapp2-1" onclick="rättaSvar('svar2-1', 'feedback2-1', 50, 'knapp2-1')">Kontrollera svar</button>
-                <p id="feedback2-1"></p>
+                <h3>Övning ett</h3>
+                <p>Linjen \( L \) går genom punkten \( (-10, -1) \) och har positiv lutning.</p>
+                <p><strong>Kvantitet I:</strong> y-koordinaten för den punkt där \( L \) skär y-axeln.</p>
+                <p><strong>Kvantitet II:</strong> 0</p>
+                <form id="kva-fraga1">
+                    <label>
+                        <input type="radio" name="svar1" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar1" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="kva-knapp1" onclick="rättaFlervalsSvar('kva-fraga1', 'kva-feedback1', 'A', 'kva-knapp1')">Kontrollera svar</button>
+                <p id="kva-feedback1"></p>
             </div>
 
             <!-- Lägg till fler övningar nedan -->
