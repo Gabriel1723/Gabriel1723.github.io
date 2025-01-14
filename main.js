@@ -7,17 +7,28 @@ const startButton = document.getElementById('borja');
 window.onload = function (){
     inaktiveraKnappar(); // Inaktivera alla knappar när sidan laddas
     visaPoäng(); 
+    hämtaPoäng()
+    aktiveraKnappVidPoäng();
 };
 
 function inaktiveraKnappar() {
     const allaKnappar = document.querySelectorAll("button"); // Hämta alla knappar
     allaKnappar.forEach(knapp => {
         // Kontrollera om knappen inte är "Börja timern"
-        if (knapp.id !== 'borja') {
+        if (knapp.id !== 'borja' && knapp.id !== 'skickaPoang') {
             knapp.disabled = true; // Inaktivera knappen
         }
     });
 
+}
+
+function aktiveraKnappVidPoäng() {
+    const extraKnapp = document.getElementById('extraKnapp');
+    
+    // Om poängen är 4 eller mer, aktivera knappen
+    if (poäng >= 7) {
+        extraKnapp.disabled = false;
+    }
 }
 
 function aktiveraKnappar() {
@@ -97,6 +108,6 @@ function visaPoäng() {
     }
 }
 
-// Anropa funktionen för att hämta poäng vid sidladdning
-hämtaPoäng();
 
+//AIzaSyAkKWkjeqc9vsmqtRXykAHDEdpSN6aXkgo
+//https://docs.google.com/spreadsheets/d/11ewKSHjifWy_MJ-jCb2ayBLOR2Ku6g4GBNSr9XT7vdM/edit?usp=sharing

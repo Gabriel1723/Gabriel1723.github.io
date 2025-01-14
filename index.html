@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matteövningar</title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://apis.google.com/js/api.js"></script> 
     
 </head>
 <body>
@@ -18,6 +19,14 @@
             <h2>Välkommen till matteövningarna</h2>
             <p>Här kan du träna på matteövningar för högskoleprovet</p>
             <div id="poängDisplay">Poäng: 0</div>
+            <a href="Svår.html"><button id="extraKnapp"disabled>Extra knapp</button></a>
+            <form id="poangForm">
+                <label for="namn">Namn:</label>
+                <input type="text" id="namn" name="namn" required>
+                <label for="poang">Poäng:</label>
+                <input type="number" id="poang" name="poang" required>
+                <button id="skickaPoang" type="submit">Skicka poäng</button>
+            </form>
         </section>
 
         <nav>
@@ -38,5 +47,61 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+        // Konfiguration för Google Sheets API
+        const sheetId = '11ewKSHjifWy_MJ-jCb2ayBLOR2Ku6g4GBNSr9XT7vdM';  // Ersätt med ditt Google Sheets ID
+        const apiKey = 'AIzaSyAOWFuvOV3497_7bQEENdOQ_z-qzMsIeEA'; // Ersätt med din API-nyckel
+        const range = 'Sheet1!A:B'; // Här definierar du vilken celler du vill arbeta med (A = Namn, B = Poäng)
+
+        // Initiera Google API-klienten
+        function init() {
+            gapi.client.init({
+                'apiKey': apiKey,
+            }).then(function() {
+                // Hämta data från Google Sheets
+                gapi.client.request({
+                    'path': `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}`,
+                }).then(function(response) {
+                    const data = response.result.values;
+                    const poangList = document.getElementById('poangDisplay');
+                    poangList.textContent = 'Poänglista:';
+                    data.forEach(function(row) {
+                        const poangListItem = document.createElement('p');
+                        poangListItem.textContent = `${row[0]}: ${row[1]} poäng`;
+                        poangList.appendChild(poangListItem);
+                    });
+                }, function(error) {
+                    console.error(error);
+                });
+            });
+        }
+
+        // Ladda Google API-klienten
+        gapi.load('client', init);
+
+        // Hantera formulärinlämning för att skicka poäng till Google Sheets
+        document.getElementById('poangForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const namn = document.getElementById('namn').value;
+            const poang = document.getElementById('poang').value;
+
+            // Skicka data till Google Sheets
+            gapi.client.request({
+    'path': `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}:append`,
+    'method': 'POST',
+    'body': JSON.stringify({
+        "values": [
+            [namn, poang] // Skickar namn och poäng som en rad
+        ]
+    }),
+}).then(function(response) {
+    console.log('Data skickad!', response);
+    location.reload(); // Ladda om sidan för att uppdatera listan
+}, function(error) {
+    console.error('Fel vid skickande av data:', error);
+    console.log('Response:', error.response);
+});
+        });
+    </script>
 </body>
 </html>
