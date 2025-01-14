@@ -1,9 +1,34 @@
 let poäng = 0; // Variabel för att lagra poäng
 let timerInterval; // Variabel för att lagra timerintervallet
-let timeRemaining = 3; // Starttid i sekunder
 
 const timerDisplay = document.getElementById('timer');
 const startButton = document.getElementById('borja');
+
+window.onload = function (){
+    inaktiveraKnappar(); // Inaktivera alla knappar när sidan laddas
+    visaPoäng(); 
+};
+
+function inaktiveraKnappar() {
+    const allaKnappar = document.querySelectorAll("button"); // Hämta alla knappar
+    allaKnappar.forEach(knapp => {
+        // Kontrollera om knappen inte är "Börja timern"
+        if (knapp.id !== 'borja') {
+            knapp.disabled = true; // Inaktivera knappen
+        }
+    });
+
+}
+
+function aktiveraKnappar() {
+    const allaKnappar = document.querySelectorAll("button"); // Hämta alla knappar
+    allaKnappar.forEach(knapp => {
+        // Kontrollera om knappen inte är "Börja timern"
+        if (knapp.id !== 'borja') {
+            knapp.disabled = false; // Inaktivera knappen
+        }
+    });
+}
 
 
 // Funktion för att uppdatera timern
@@ -25,31 +50,32 @@ function updateTimer() {
 // Starta timern
 startButton.addEventListener('click', () => {
     clearInterval(timerInterval); // Rensa eventuell befintlig timer
-    timeRemaining = 3; // Återställ timern
+    timeRemaining = 5; // Återställ timern
     timerInterval = setInterval(updateTimer, 1000); // Starta en ny timer
+    aktiveraKnappar()
 });
 
 // Funktion för att rätta flervalsfrågor
 function rättaFlervalsSvar(formId, feedbackId, rättSvar, knappId) {
-    const form = document.getElementById(formId);
-    const feedback = document.getElementById(feedbackId);
-    const valdaAlternativ = form.elements['svar1'].value; // Hämtar det valda alternativet (A, B, C, D)
+    const form = document.getElementById(formId); // Hämta formuläret
+    const feedback = document.getElementById(feedbackId); // Hämta feedback-elementet
+    const valdaAlternativ = form.querySelector('input[type="radio"]:checked'); // Hämta valt alternativ
 
-    if (valdaAlternativ === rättSvar) {
-        feedback.textContent = "Rätt svar! +1 poäng";
-        poäng++; // Lägg till poäng
-        localStorage.setItem('poäng', poäng); // Spara poängen i localStorage
+    if (valdaAlternativ) {
+        if (valdaAlternativ.value === rättSvar) {
+            feedback.textContent = "Rätt svar! +1 poäng";
+            poäng++; // Lägg till poäng
+            localStorage.setItem('poäng', poäng); // Spara poängen i localStorage
+        } else {
+            feedback.textContent = "Fel svar. Försök igen nästa gång!";
+        }
+
+        // Inaktivera knappen och alternativen
+        document.getElementById(knappId).disabled = true;
+        const alternativ = form.querySelectorAll('input[type="radio"]');
+        alternativ.forEach(alternativ => alternativ.disabled = true);
     } else {
-        feedback.textContent = "Fel svar. Försök igen nästa gång!";
-    }
-
-    // Inaktivera knappen för denna fråga
-    document.getElementById(knappId).disabled = true;
-
-    // Inaktivera alla alternativ i formuläret
-    const alternativ = form.elements['svar1'];
-    for (let i = 0; i < alternativ.length; i++) {
-        alternativ[i].disabled = true;
+        feedback.textContent = "Vänligen välj ett alternativ innan du kontrollerar svaret.";
     }
 }
 
@@ -58,6 +84,16 @@ function hämtaPoäng() {
     const sparadPoäng = localStorage.getItem('poäng');
     if (sparadPoäng) {
         poäng = parseInt(sparadPoäng, 10);
+    }
+    visaPoäng(); // Uppdatera poäng i HTML
+}
+
+function visaPoäng() {
+    const sparadPoäng = localStorage.getItem('poäng');
+    if (sparadPoäng) {
+        document.getElementById('poängDisplay').textContent = `Poäng: ${sparadPoäng}`;
+    } else {
+        document.getElementById('poängDisplay').textContent = "Poäng: 0";
     }
 }
 

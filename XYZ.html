@@ -24,6 +24,7 @@
             <p>Består av 12 uppgifter som alla är mattetal där du ska ge ett exakt svar. Du har fyra svarsalternativ till varje uppgift. Du har ungefär en minut till varje uppgift.</p>
             <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
             <h1 id="timer">120</h1>
+            <div id="poängDisplay">Poäng: 0</div>
         </section>
 
           <section id="övningar"> 
@@ -49,13 +50,25 @@
                 <button id="knapp1" onclick="rättaFlervalsSvar('fraga1', 'feedback1', 'C', 'knapp1')">Kontrollera svar</button>
                 <p id="feedback1"></p>
             </div>
-        
             <div class="övning">
                 <h3> Övning två</h3>
                 <p>Vad är 100 - 23?</p>
-                <input type="number" id="svar1-2" placeholder="Skriv ditt svar här">
-                <button id="knapp1-2" onclick="rättaSvar('svar1-2', 'feedback1-2', 77, 'knapp1-2')">Kontrollera svar</button>
-                <p id="feedback1-2"></p>
+                <form id="fraga2">
+                    <label>
+                        <input type="radio" name="svar2" value="A"> A) \( \frac{13}{12} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar2" value="B"> B) \( \frac{9}{8} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar2" value="C"> C) \( \frac{11}{8} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar2" value="D"> D) \( \frac{5}{14} \)
+                    </label><br>
+                </form>
+                <button id="knapp2" onclick="rättaFlervalsSvar('fraga2', 'feedback2', 'D', 'knapp2')">Kontrollera svar</button>
+                <p id="feedback2"></p>
             </div>
         
             <div class="övning">
