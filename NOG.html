@@ -9,7 +9,7 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 </head>
-<body>
+<body data-page="NOG">
     <header>
         <h1>NOG</h1>
         <nav>
@@ -22,47 +22,169 @@
             <h2>Resonemang delen</h2>
             <p>Består av 6 uppgifter, som alla presenterar ett problem följt av två påståenden. Här gäller det att avgöra om den information som påståendena ger är tillräcklig för att problemet ska kunna lösas.</p>
             <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
-            <h1 id="timer">120</h1>
+            <h1 id="timer">10 min</h1>
             <div id="poängDisplay">Poäng: 0</div>
         </section>
 
-        <section id="övningar">
+        <section id="övningar" class="hidden"> 
             <h2>Matteövningar</h2>
 
             <div class="övning">
-                <h3>Övning ett</h3>
-                <p>Till en damfotbollsmatch såldes enbart sittplatsbiljetter och ståplatsbiljetter. Hur många ståplatsbiljetter såldes om sittplatsbiljetterna kostade 80 kr styck?</p>
-                <p><strong>(1)</strong> Sammanlagt såldes biljetter för 27 220 kr.</p>
-                <p><strong>(2)</strong> Ståplatsbiljetterna var 50 kr billigare än sittplatsbiljetterna.</p>
-                <form id="nog-fraga1">
+                <h3>Övning tjugotre</h3>
+                <p>Malin har en påse med äpplen. Hur många äpplen finns det i påsen?</p>
+                <p><strong>(1)</strong> Om Malin lägger ner ytterligare två äpplen i påsen så utgör dessa två äpplen \( \frac{1}{12} \) av antalet äpplen i påsen.</p>
+                <p><strong>(2)</strong> Om Malin plockar bort två äpplen ur påsen så minskar antalet äpplen i påsen med \( \frac{1}{11} \).</p>
+                <form id="nog-fraga23">
                     <label>
-                        <input type="radio" name="svar1" value="A"> A) I (1) men ej i (2)
+                        <input type="radio" name="svar23" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="B"> B) I (2) men ej (1)
+                        <input type="radio" name="svar23" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="C"> C) I (1) tillsammans med (2)
+                        <input type="radio" name="svar23" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="D"> D) I (1) och (2) var för sig
+                        <input type="radio" name="svar23" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="E"> E) Ej genom de båda påståendena
+                        <input type="radio" name="svar23" value="E"> E) Ej genom de båda påståendena
                     </label><br>
                 </form>
-                <button id="nog-knapp1" onclick="rättaFlervalsSvar('nog-fraga1', 'feedback-nog1', 'E', 'nog-knapp1')">Kontrollera svar</button>
-                <p id="feedback-nog1"></p>
+                <button id="nog-knapp23" onclick="rättaFlervalsSvar('nog-fraga23', 'feedback-nog23', 'D', 'nog-knapp23')">Kontrollera svar</button>
+                <p id="feedback-nog23"></p>
             </div>
-
-            <!-- Lägg till fler övningar nedan -->
             <div class="övning">
-                <h3> Övning två</h3>
-                <p>Vad är 10 * 6?</p>
-                <input type="number" id="svar3-2" placeholder="Skriv ditt svar här">
-                <button id="knapp3-2" onclick="rättaSvar('svar3-2', 'feedback3-2', 60, 'knapp3-2')">Kontrollera svar</button>
-                <p id="feedback3-2"></p>
+                <h3>Övning tjugofyra</h3>
+                <p>I ett val ställde två kandidater upp. Alla valsedlar var giltiga, och varje röst lades på någon av de två kandidaterna. Hur många röster lades i valet?</p>
+                <p><strong>(1)</strong> Den kandidat som vann valet fick \( 56 \% \) av rösterna.</p>
+                <p><strong>(2)</strong> Den kandidat som vann valet fick 1200 röster fler än den som förlorade.</p>
+                <form id="nog-fraga24">
+                    <label>
+                        <input type="radio" name="svar24" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar24" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar24" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar24" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar24" value="E"> E) Ej genom de båda påståendena
+                    </label><br>
+                </form>
+                <button id="nog-knapp24" onclick="rättaFlervalsSvar('nog-fraga24', 'feedback-nog24', 'C', 'nog-knapp24')">Kontrollera svar</button>
+                <p id="feedback-nog24"></p>
             </div>
+            <div class="övning">
+                <h3>Övning tjugofem</h3>
+                <p>Alexandra, Benjamin, Julia och Sebastian är syskon. Vilket av syskonen är yngst?</p>
+                <p><strong>(1)</strong> Benjamin är äldre än Alexandra. Julia är dubbelt så gammal som Sebastian.</p>
+                <p><strong>(2)</strong> Sebastian är 5 år och Benjamin är 12 år.</p>
+                <form id="nog-fraga25">
+                    <label>
+                        <input type="radio" name="svar25" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar25" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar25" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar25" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar25" value="E"> E) Ej genom de båda påståendena
+                    </label><br>
+                </form>
+                <button id="nog-knapp25" onclick="rättaFlervalsSvar('nog-fraga25', 'feedback-nog25', 'E', 'nog-knapp25')">Kontrollera svar</button>
+                <p id="feedback-nog25"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning tjugosex</h3>
+                <p>Fyra nycklar är numrerade 1, 2, 3, 4. Var och en av nycklarna passar i ett av fyra lås som också är numrerade 1, 2, 3, 4. Vilken nyckel passar i vilket lås?</p>
+                <p><strong>(1)</strong> Ingen nyckel har samma nummer som det lås den passar i.</p>
+                <p><strong>(2)</strong> Summan av låsets och nyckelns nummer är densamma för varje par av lås och passande nyckel.</p>
+                <form id="nog-fraga26">
+                    <label>
+                        <input type="radio" name="svar26" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar26" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar26" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar26" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar26" value="E"> E) Ej genom de båda påståendena
+                    </label><br>
+                </form>
+                <button id="nog-knapp26" onclick="rättaFlervalsSvar('nog-fraga26', 'feedback-nog26', 'B', 'nog-knapp26')">Kontrollera svar</button>
+                <p id="feedback-nog26"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning tjugosju</h3>
+                <p>En cirkelformad pizza delas i sex likadana bitar i form av cirkelsektorer. Hur stor är pizzans omkrets?</p>
+                <p><strong>(1)</strong> Arean av varje bit är \( 96 \pi \, \text{cm}^2 \).</p>
+                <p><strong>(2)</strong> Cirkelbågen på varje bit är \( 8 \pi \, \text{cm} \).</p>
+                <form id="nog-fraga27">
+                    <label>
+                        <input type="radio" name="svar27" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar27" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar27" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar27" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar27" value="E"> E) Ej genom de båda påståendena
+                    </label><br>
+                </form>
+                <button id="nog-knapp27" onclick="rättaFlervalsSvar('nog-fraga27', 'feedback-nog27', 'D', 'nog-knapp27')">Kontrollera svar</button>
+                <p id="feedback-nog27"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning tjugoåtta</h3>
+                <p>Bo ställer sig sist i en kö för att åka berg- och dalbana. Efter 10 minuter står det 100 personer i kön. Hur många personer står före Bo i kön vid denna tidpunkt?</p>
+                <p><strong>(1)</strong> Sedan Bo ställde sig i kön har antalet personer före honom i kön minskat med 55.</p>
+                <p><strong>(2)</strong> Sedan Bo ställde sig i kön har antalet personer efter honom i kön ökat med 36.</p>
+                <form id="nog-fraga28">
+                    <label>
+                        <input type="radio" name="svar28" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar28" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar28" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar28" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar28" value="E"> E) Ej genom de båda påståendena
+                    </label><br>
+                </form>
+                <button id="nog-knapp28" onclick="rättaFlervalsSvar('nog-fraga28', 'feedback-nog28', 'B', 'nog-knapp28')">Kontrollera svar</button>
+                <p id="feedback-nog28"></p>
+            </div>
+            
+            
+            
+            
+            
+
 
         </section>
     </main>

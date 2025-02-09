@@ -1,44 +1,180 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --header-bg: #343a40;
+  --header-text-color: #ffffff;
+  --intro-bg: #e9ecef;
+  --button-disabled-bg: #c0c0c0;
+  --leaderboard-bg: #e9ecef;
+  --button-hover-bg: #28a745; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 header {
-    font-size: large;
-    font-weight: bolder;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    background-color: beige;
+  background-color: var(--header-bg);
+  color: var(--header-text-color);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
 }
 
 #intro {
-    font-size: auto;
-    margin: 10px 0% 0% 0%;
-    text-align: center;
-    background-color: aqua;
+  background-color: var(--intro-bg);
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-#övningar 
-{
-    background-color: rgb(232, 232, 255);
-    margin: 0% 0% 0% 0%;
-    text-align: center;
+#poängDisplay {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+
+}
+
+.hidden {
+  display: none;
+}
+
+#extraKnapp {
+  background-color: var(--button-disabled-bg);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+#extraKnapp:hover {
+  background-color: var(--button-hover-bg); 
+  color: #fff; 
+}
+
+
+#scoreForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+#scoreForm label {
+  font-weight: bold;
+}
+
+#scoreForm input, #scoreForm button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#scoreForm button {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+#scoreForm button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+#bemarkelseText {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+#bemarkelseBild {
+  margin-top: 1rem;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+#övningar {
+  margin-bottom: 2rem; /* Lägg till en marginal på för att skapa utrymme under sektionen */
 }
 
 .övning {
-    margin: 5% 0 0 0;
-    background-color: rgb(255, 235, 235);
-    font-size: larger;
+  margin-bottom: 2rem; /* Lägg till en margin-bottom för att skapa utrymme mellan övningarna */
+  padding: 1rem;
+  background-color: var(--ovning-bg);
+  border-radius: 5px;
 }
 
-/* För mobiler */
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--header-bg);
+  color: var(--header-text-color);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
 @media (max-width: 768px) {
-    h1 {
-      font-size: 2em;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    nav ul li {
-      margin: 10px 0;
-    }
+  h1 {
+      font-size: 2rem;
   }
+
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+}

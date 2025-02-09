@@ -9,7 +9,7 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 </head>
-<body>
+<body data-page="XYZ">
     <header>
         <h1>XYZ</h1>
         <nav>
@@ -22,61 +22,258 @@
         <section id="intro">
             <h2>Mattedelen</h2>
             <p>Består av 12 uppgifter som alla är mattetal där du ska ge ett exakt svar. Du har fyra svarsalternativ till varje uppgift. Du har ungefär en minut till varje uppgift.</p>
-            <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
-            <h1 id="timer">120</h1>
+            <button id="borja">Börja timern</button>
+            <h1 id="timer">12 min.</h1>
             <div id="poängDisplay">Poäng: 0</div>
         </section>
 
-          <section id="övningar"> 
+          <section id="övningar" class="hidden"> 
             <h2>Matteövningar</h2>
         
             <div class="övning">
                 <h3>Övning ett</h3>
-                <p>Vad är \( \frac{1}{8} + \frac{3}{4} + \frac{1}{2} \)?</p>
+                <p> \( x - 7 = 3(x + 1) \) <br> 
+                    Vilket värde har \( x \)? 
+                </p>
                 <form id="fraga1">
                     <label>
-                        <input type="radio" name="svar1" value="A"> A) \( \frac{13}{12} \)
+                        <input type="radio" name="svar1" value="A"> A) -5
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="B"> B) \( \frac{9}{8} \)
+                        <input type="radio" name="svar1" value="B"> B) -4
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="C"> C) \( \frac{11}{8} \)
+                        <input type="radio" name="svar1" value="C"> C) 2
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="D"> D) \( \frac{5}{14} \)
+                        <input type="radio" name="svar1" value="D"> D) \( \frac{2}{5} \)
                     </label><br>
                 </form>
-                <button id="knapp1" onclick="rättaFlervalsSvar('fraga1', 'feedback1', 'C', 'knapp1')">Kontrollera svar</button>
+                <button id="knapp1" onclick="rättaFlervalsSvar('fraga1', 'feedback1', 'A', 'knapp1')">Kontrollera svar</button>
                 <p id="feedback1"></p>
             </div>
             <div class="övning">
-                <h3> Övning två</h3>
-                <p>Vad är 100 - 23?</p>
+                <h3>Övning två</h3>
+                <img src="Bilder\XYZ2.png" alt="Bild">
+                <p>Vad är \( x + y \)?</p>
                 <form id="fraga2">
                     <label>
-                        <input type="radio" name="svar2" value="A"> A) \( \frac{13}{12} \)
+                        <input type="radio" name="svar2" value="A"> A) 110°
                     </label><br>
                     <label>
-                        <input type="radio" name="svar2" value="B"> B) \( \frac{9}{8} \)
+                        <input type="radio" name="svar2" value="B"> B) 120°
                     </label><br>
                     <label>
-                        <input type="radio" name="svar2" value="C"> C) \( \frac{11}{8} \)
+                        <input type="radio" name="svar2" value="C"> C) 130°
                     </label><br>
                     <label>
-                        <input type="radio" name="svar2" value="D"> D) \( \frac{5}{14} \)
+                        <input type="radio" name="svar2" value="D"> D) 140°
                     </label><br>
                 </form>
-                <button id="knapp2" onclick="rättaFlervalsSvar('fraga2', 'feedback2', 'D', 'knapp2')">Kontrollera svar</button>
+                <button id="knapp2" onclick="rättaFlervalsSvar('fraga2', 'feedback2', 'C', 'knapp2')">Kontrollera svar</button>
                 <p id="feedback2"></p>
             </div>
-        
             <div class="övning">
-                <h3> Övning tre</h3>
-                <p>Vad är 118 - 43?</p>
-                <input type="number" id="svar1-3" placeholder="Skriv ditt svar här">
-                <button id="knapp1-3" onclick="rättaSvar('svar1-3', 'feedback1-3', 75, 'knapp1-3')">Kontrollera svar</button>
-                <p id="feedback1-3"></p>
+                <h3>Övning tre</h3>
+                <p>Vad är medelvärdet av \( 8^2 \) och \( 4^2 \)?</p>
+                <form id="fraga3">
+                    <label>
+                        <input type="radio" name="svar3" value="A"> A) \( 2 \cdot 4^2 \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar3" value="B"> B) \( 6^2 \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar3" value="C"> C) \( 2^3 \cdot 5 \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar3" value="D"> D) \( 2^2 \cdot 12 \)
+                    </label><br>
+                </form>
+                <button id="knapp3" onclick="rättaFlervalsSvar('fraga3', 'feedback3', 'C', 'knapp3')">Kontrollera svar</button>
+                <p id="feedback3"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning fyra</h3>
+                <p>\( f(x) = 3x - 1 \) <br> \( g(x) = -2f(x) + 4 \)<br>Vilket svarsalternativ är lika med \( g(1) \)?</p>
+                <form id="fraga4">
+                    <label>
+                        <input type="radio" name="svar4" value="A"> A) 0
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar4" value="B"> B) 2
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar4" value="C"> C) 4
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar4" value="D"> D) 6
+                    </label><br>
+                </form>
+                <button id="knapp4" onclick="rättaFlervalsSvar('fraga4', 'feedback4', 'A', 'knapp4')">Kontrollera svar</button>
+                <p id="feedback4"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning fem</h3>
+                <p>\( \frac{\frac{2}{5} - \frac{1}{4}}{\frac{1}{3} + \frac{1}{6}} \)<br>Vilket svarsalternativ är lika med detta uttryck?</p>
+                <form id="fraga5">
+                    <label>
+                        <input type="radio" name="svar5" value="A"> A) \( \frac{2}{9} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar5" value="B"> B) \( \frac{3}{10} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar5" value="C"> C) \( \frac{9}{2} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar5" value="D"> D) \( \frac{10}{3} \)
+                    </label><br>
+                </form>
+                <button id="knapp5" onclick="rättaFlervalsSvar('fraga5', 'feedback5', 'B', 'knapp5')">Kontrollera svar</button>
+                <p id="feedback5"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning sex</h3>
+                <p>Vilket svarsalternativ är lika med ett heltal?</p>
+                <form id="fraga6">
+                    <label>
+                        <input type="radio" name="svar6" value="A"> A) \( 51 \sqrt{51} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar6" value="B"> B) \( \sqrt{51}(\sqrt{51} + 51) \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar6" value="C"> C) \( \sqrt{51} + \sqrt{51} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar6" value="D"> D) \( (\sqrt{51} + \sqrt{51})^{2} \)
+                    </label><br>
+                </form>
+                <button id="knapp6" onclick="rättaFlervalsSvar('fraga6', 'feedback6', 'D', 'knapp6')">Kontrollera svar</button>
+                <p id="feedback6"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning sju</h3>
+                <p>\( f(x) = a \cdot 3^{x} \)<br>
+                Om \( a \) väljs så att \( f(1) = 3 \), vilket värde har då \( f(0) \) ?</p>
+                <form id="fraga7">
+                    <label>
+                        <input type="radio" name="svar7" value="A"> A) 0
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar7" value="B"> B) \( \frac{1}{3} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar7" value="C"> C) 1
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar7" value="D"> D) 3
+                    </label><br>
+                </form>
+                <button id="knapp7" onclick="rättaFlervalsSvar('fraga7', 'feedback7', 'C', 'knapp7')">Kontrollera svar</button>
+                <p id="feedback7"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning åtta</h3>
+                <p>\( x y z \neq 0 \)<br>
+                Vilket svarsalternativ motsvarar \( \frac{x^{4} y^{2} z^{3}}{\left(x^{2} y z^{2}\right)^{2}} \) ?</p>
+                <form id="fraga8">
+                    <label>
+                        <input type="radio" name="svar8" value="A"> A) \( \frac{1}{y z} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar8" value="B"> B) 1
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar8" value="C"> C) \( \frac{1}{y} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar8" value="D"> D) \( \frac{1}{z} \)
+                    </label><br>
+                </form>
+                <button id="knapp8" onclick="rättaFlervalsSvar('fraga8', 'feedback8', 'D', 'knapp8')">Kontrollera svar</button>
+                <p id="feedback8"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning nio</h3>
+                <p>\( 60 \% \) av \( x \) är lika med \( 40 \% \) av \( y \). Hur många procent av \( \boldsymbol{x} \) är \( \boldsymbol{y} \) ?</p>
+                <form id="fraga9">
+                    <label>
+                        <input type="radio" name="svar9" value="A"> A) \( 20 \% \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar9" value="B"> B) \( 66 \% \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar9" value="C"> C) \( 100 \% \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar9" value="D"> D) \( 150 \% \)
+                    </label><br>
+                </form>
+                <button id="knapp9" onclick="rättaFlervalsSvar('fraga9', 'feedback9', 'D', 'knapp9')">Kontrollera svar</button>
+                <p id="feedback9"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning tio</h3>
+                <p>Arean av en kvadrat är \( 100 \, \mathrm{cm}^2 \). Vilket svarsalternativ är närmast längden av kvadratens diagonal?</p>
+                <form id="fraga10">
+                    <label>
+                        <input type="radio" name="svar10" value="A"> A) \( 10 \, \mathrm{cm} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar10" value="B"> B) \( 12 \, \mathrm{cm} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar10" value="C"> C) \( 14 \, \mathrm{cm} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar10" value="D"> D) \( 16 \, \mathrm{cm} \)
+                    </label><br>
+                </form>
+                <button id="knapp10" onclick="rättaFlervalsSvar('fraga10', 'feedback10', 'C', 'knapp10')">Kontrollera svar</button>
+                <p id="feedback10"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning elva</h3>
+                <p>\( z = x + y = 5 \)<br>Vad är \( \sqrt{x z + y z} \) ?</p>
+                <form id="fraga11">
+                    <label>
+                        <input type="radio" name="svar11" value="A"> A) \( \sqrt{5} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar11" value="B"> B) 5
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar11" value="C"> C) \( 5 \sqrt{5} \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar11" value="D"> D) 25
+                    </label><br>
+                </form>
+                <button id="knapp11" onclick="rättaFlervalsSvar('fraga11', 'feedback11', 'B', 'knapp11')">Kontrollera svar</button>
+                <p id="feedback11"></p>
+            </div>
+            <div class="övning" class="hidden">
+                <h3>Övning tolv</h3>
+                <p>Summan av de 30 första udda positiva heltalen är \( u \). Summan av de 30 första jämna positiva heltalen är \( \boldsymbol{j} \). Vad är \( \boldsymbol{u} - \boldsymbol{j} \) ?</p>
+                <form id="fraga12">
+                    <label>
+                        <input type="radio" name="svar12" value="A"> A) \( -30 \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar12" value="B"> B) \( -1 \)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar12" value="C"> C) 0
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar12" value="D"> D) 30
+                    </label><br>
+                </form>
+                <button id="knapp12" onclick="rättaFlervalsSvar('fraga12', 'feedback12', 'A', 'knapp12')">Kontrollera svar</button>
+                <p id="feedback12"></p>
             </div>
         </section>
     </main>

@@ -1,92 +1,206 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemlig svår nivå</title>
-    <link rel="stylesheet" href="main.css">
-    <script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-</head>
-<body>
-    <header>
-        <h1>Svår nivå</h1>
-        <nav>
-            <a href="index.html">Hem</a>
-        </nav>
-    </header>
-
-
-    <main>
-        <section id="intro">
-            <h2>Grattis</h2>
-            <p>Dessa uppgifter är exceptionell svåra</p>
-            <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
-            <h1 id="timer">120</h1>
-            <div id="poängDisplay">Poäng: 0</div>
-        </section>
-
-          <section id="övningar"> 
-            <h2>Matteövningar</h2>
+       <!DOCTYPE html>
+        <html lang="sv">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>BONUS</title>
+            <link rel="stylesheet" href="main.css">
+            <script type="text/javascript" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+          </script>
+        </head>
+        <body data-page="BONUS">
+            <header>
+                <h1>BONUS</h1>
+                <nav>
+                    <a href="index.html">Hem</a>
+                </nav>
+            </header>
         
-            <div class="övning">
-                <h3>Övning ett</h3>
-                <p>Vad är \( \frac{1}{8} + \frac{3}{4} + \frac{1}{2} \)?</p>
-                <form id="fraga1">
-                    <label>
-                        <input type="radio" name="svar1" value="A"> A) \( \frac{13}{12} \)
-                    </label><br>
-                    <label>
-                        <input type="radio" name="svar1" value="B"> B) \( \frac{9}{8} \)
-                    </label><br>
-                    <label>
-                        <input type="radio" name="svar1" value="C"> C) \( \frac{11}{8} \)
-                    </label><br>
-                    <label>
-                        <input type="radio" name="svar1" value="D"> D) \( \frac{5}{14} \)
-                    </label><br>
-                </form>
-                <button id="knapp1" onclick="rättaFlervalsSvar('fraga1', 'feedback1', 'C', 'knapp1')">Kontrollera svar</button>
-                <p id="feedback1"></p>
-            </div>
-            <div class="övning">
-                <h3> Övning två</h3>
-                <p>Vad är 100 - 23?</p>
-                <form id="fraga2">
-                    <label>
-                        <input type="radio" name="svar2" value="A"> A) \( \frac{13}{12} \)
-                    </label><br>
-                    <label>
-                        <input type="radio" name="svar2" value="B"> B) \( \frac{9}{8} \)
-                    </label><br>
-                    <label>
-                        <input type="radio" name="svar2" value="C"> C) \( \frac{11}{8} \)
-                    </label><br>
-                    <label>
-                        <input type="radio" name="svar2" value="D"> D) \( \frac{5}{14} \)
-                    </label><br>
-                </form>
-                <button id="knapp2" onclick="rättaFlervalsSvar('fraga2', 'feedback2', 'D', 'knapp2')">Kontrollera svar</button>
-                <p id="feedback2"></p>
-            </div>
+            <main>
+               
+            <section id="intro">
+                <h2>Grattis</h2>
+                <p>Dessa uppgifter är till de som fick mer än 1.7(35 poäng)</p>
+                <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
+                <h1 id="timer">120</h1>
+                <div id="poängDisplay">Poäng: 0</div>
+            </section>
         
-            <div class="övning">
-                <h3> Övning tre</h3>
-                <p>Vad är 118 - 43?</p>
-                <input type="number" id="svar1-3" placeholder="Skriv ditt svar här">
-                <button id="knapp1-3" onclick="rättaSvar('svar1-3', 'feedback1-3', 75, 'knapp1-3')">Kontrollera svar</button>
-                <p id="feedback1-3"></p>
-            </div>
-        </section>
-    </main>
-
-    <hr>
-
-    <footer>
-        <p>&copy; 2024 Matteövningar. Alla rättigheter reserverade.</p>
-    </footer>
-
-    <script src="main.js"></script>
-</body>
-</html>
+                <section id="övningar" class="hidden"> 
+                    <h2>Matteövningar</h2>
+        
+                    <div class="övning">
+                        <h3>1.</h3>
+                        <p>Kent ska måla ett staket. Han arbetar utan rast och med konstant hastighet. Hur lång tid tar det för honom att måla staketet?</p>
+                        <p><strong>(1)</strong> Det tar Kent 2 timmar att måla \( \frac{1}{4} \) av staketet.</p>
+                        <p><strong>(2)</strong> Om Kent arbetade dubbelt så fort så skulle det ta honom 2 timmar att måla \( \frac{2}{3} \) av staketet.</p>
+                        <form id="bonus-fraga25">
+                            <label>
+                                <input type="radio" name="svar25" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar25" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar25" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar25" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar25" value="E"> E) Ej genom de båda påståendena
+                            </label><br>
+                        </form>
+                        <button id="bonus-knapp25" onclick="rättaFlervalsSvar('bonus-fraga25', 'feedback-bonus25', 'D', 'bonus-knapp25')">Kontrollera svar</button>
+                        <p id="feedback-bonus25"></p>
+                    </div>
+                    <div class="övning">
+                        <h3>2.</h3>
+                        <p>Priset på en vara sänktes med 20 procent. Vid ett senare tillfälle gjordes en prishöjning. Hur stor var den totala prisändringen i procent?</p>
+                        <p><strong>(1)</strong> Varans ursprungspris var 755 kr.</p>
+                        <p><strong>(2)</strong> Prishöjningen var 25 procent.</p>
+                        <form id="bonus-fraga26">
+                            <label>
+                                <input type="radio" name="svar26" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar26" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar26" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar26" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar26" value="E"> E) Ej genom de båda påståendena
+                            </label><br>
+                        </form>
+                        <button id="bonus-knapp26" onclick="rättaFlervalsSvar('bonus-fraga26', 'feedback-bonus26', 'B', 'bonus-knapp26')">Kontrollera svar</button>
+                        <p id="feedback-bonus26"></p>
+                    </div>                    
+                    <div class="övning">
+                        <h3>3.</h3>
+                        <p>Arvid har 12 anteckningsblock för sitt skolarbete. Vart och ett av blocken har antingen rutade eller linjerade blad. Dessutom är vart och ett av blocken i antingen A4-format eller A5-format. Hur många av Arvids anteckningsblock har rutade blad?</p>
+                        <p><strong>(1)</strong> \( \frac{1}{4} \) av anteckningsblocken i A4-format har rutade blad.</p>
+                        <p><strong>(2)</strong> \( \frac{1}{2} \) av anteckningsblocken i A5-format har rutade blad.</p>
+                        <form id="bonus-fraga27">
+                            <label>
+                                <input type="radio" name="svar27" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar27" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar27" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar27" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar27" value="E"> E) Ej genom de båda påståendena
+                            </label><br>
+                        </form>
+                        <button id="bonus-knapp27" onclick="rättaFlervalsSvar('bonus-fraga27', 'feedback-bonus27', 'E', 'bonus-knapp27')">Kontrollera svar</button>
+                        <p id="feedback-bonus27"></p>
+                    </div>
+                    <div class="övning">
+                        <h3>4.</h3>
+                        <p>Är \( x > y \) ?</p>
+                        <p><strong>(1)</strong> \( x - y > x + y \)</p>
+                        <p><strong>(2)</strong> \( x > 0 \)</p>
+                        <form id="bonus-fraga28">
+                            <label>
+                                <input type="radio" name="svar28" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar28" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar28" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar28" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar28" value="E"> E) Ej genom de båda påståendena
+                            </label><br>
+                        </form>
+                        <button id="bonus-knapp28" onclick="rättaFlervalsSvar('bonus-fraga28', 'feedback-bonus28', 'C', 'bonus-knapp28')">Kontrollera svar</button>
+                        <p id="feedback-bonus28"></p>
+                    </div>
+                    <div class="övning">
+                        <h3>5.</h3>
+                        <p>Ett badhus har tre trampoliner på olika höjd: 1 meter, 3 meter och 5 meter. Daniel, Gabriel och Mikael hoppar från var sin trampolin. Vem hoppar från 5 meter?</p>
+                        <p><strong>(1)</strong> Daniel hoppar inte från 5 meter.</p>
+                        <p><strong>(2)</strong> Gabriel hoppar från en lägre höjd än Mikael.</p>
+                        <form id="bonus-fraga29">
+                            <label>
+                                <input type="radio" name="svar29" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar29" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar29" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar29" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar29" value="E"> E) Ej genom de båda påståendena
+                            </label><br>
+                        </form>
+                        <button id="bonus-knapp29" onclick="rättaFlervalsSvar('bonus-fraga29', 'feedback-bonus29', 'C', 'bonus-knapp29')">Kontrollera svar</button>
+                        <p id="feedback-bonus29"></p>
+                    </div>
+                    <div class="övning">
+                        <h3>6.</h3>
+                        <p>I ett garage parkeras endast två slags fordon: bilar och motorcyklar. Det finns 176 fordon i garaget. <strong>Hur många av fordonen är motorcyklar?</strong></p>
+                        <p><strong>(1)</strong> Om ytterligare 16 motorcyklar parkeras i garaget så kommer det att vara dubbelt så många motorcyklar som bilar i garaget.</p>
+                        <p><strong>(2)</strong> Om ytterligare \( x \) bilar och 10 motorcyklar parkeras i garaget så kommer det att vara lika många bilar som motorcyklar i garaget.</p>
+                        <form id="bonus-fraga30">
+                            <label>
+                                <input type="radio" name="svar30" value="A"> A) Tillräcklig information för lösningen erhålls i (1) men ej i (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar30" value="B"> B) Tillräcklig information för lösningen erhålls i (2) men ej i (1)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar30" value="C"> C) Tillräcklig information för lösningen erhålls i (1) tillsammans med (2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar30" value="D"> D) Tillräcklig information för lösningen erhålls i (1) och (2) var för sig
+                            </label><br>
+                            <label>
+                                <input type="radio" name="svar30" value="E"> E) Ej genom de båda påståendena
+                            </label><br>
+                        </form>
+                        <button id="bonus-knapp30" onclick="rättaFlervalsSvar('bonus-fraga30', 'feedback-bonus30', 'A', 'bonus-knapp30')">Kontrollera svar</button>
+                        <p id="feedback-bonus30"></p>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+        
+        
+                </section>
+            </main>
+        
+            <hr>
+        
+            <footer>
+                <p>&copy; 2024 Matteövningar. Alla rättigheter reserverade.</p>
+            </footer>
+        
+            <script src="main.js"></script>
+        </body>
+        </html>

@@ -9,7 +9,7 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 </head>
-<body>
+<body data-page="DTK">
     <header>
         <h1>DTK</h1>
         <nav>
@@ -21,46 +21,270 @@
             <h2>Diagramdelen</h2>
             <p>Består av 12 uppgifter som är kopplade till olika kartor, tabeller och diagram och uppgifterna går att lösa genom att läsa av dessa samt göra diverse uträkningar.</p>
             <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
-            <h1 id="timer">120</h1>
+            <h1 id="timer">23 min</h1>
             <div id="poängDisplay">Poäng: 0</div>
         </section>
 
-        <section id="övningar">
+        <section id="övningar" class="hidden"> 
             <h2>Matteövningar</h2>
 
             <div class="övning">
-                <h3>Övning ett</h3>
-                <img src="Bilder\DTK1.png" alt="Bild">
-                <p>Vilken av följande byggnader hade en area på cirka 40m2 och var byggd av timmer?</p>
-    
-                <form id="dtk-fraga1">
+                <h3>Kvinnor och män i näringslivet</h3><br>
+                <p>Antalet chefer respektive samtliga anställda inom privat sektor 2012, uppdelat på kvinnor och män
+                    samt på län.</p>
+                <img src="Bilder/DTK293031.png" alt="Diagram över könsfördelning bland chefer och anställda">
+            
+                <h3>Uppgifter</h3>
+            
+                <h3>29.</h3>
+                <p>Hur många av länen hade en större andel kvinnliga chefer än riket som helhet?</p>
+                <form id="dkt-fraga29">
                     <label>
-                        <input type="radio" name="svar1" value="A"> A) I är större än II
+                        <input type="radio" name="svar29" value="A"> A) 4
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="B"> B) II är större än I
+                        <input type="radio" name="svar29" value="B"> B) 6
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="C"> C) I är lika med II
+                        <input type="radio" name="svar29" value="C"> C) 12
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="D"> D) Informationen är otillräcklig
+                        <input type="radio" name="svar29" value="D"> D) 14
                     </label><br>
                 </form>
-                <button id="dtk-knapp1" onclick="rättaFlervalsSvar('dtk-fraga1', 'dtk-feedback1', 'D', 'dtk-knapp1')">Kontrollera svar</button>
-                <p id="dtk-feedback1"></p>
+                <button id="dkt-knapp29" onclick="rättaFlervalsSvar('dkt-fraga29', 'feedback-dkt29', 'B', 'dkt-knapp29')">Kontrollera svar</button>
+                <p id="feedback-dkt29"></p><br>
+            
+                <h3>30.</h3>
+                <p>Studera Gävleborgs län. Hur stor var skillnaden mellan andelen män bland samtliga anställda och andelen män bland chefer?</p>
+                <form id="dkt-fraga30">
+                    <label>
+                        <input type="radio" name="svar30" value="A"> A) 8 procentenheter
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar30" value="B"> B) 10 procentenheter
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar30" value="C"> C) 13 procentenheter
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar30" value="D"> D) 16 procentenheter
+                    </label><br>
+                </form>
+                <button id="dkt-knapp30" onclick="rättaFlervalsSvar('dkt-fraga30', 'feedback-dkt30', 'D', 'dkt-knapp30')">Kontrollera svar</button>
+                <p id="feedback-dkt30"></p><br>
+            
+                <h3>31.</h3>
+                <p>Identifiera länet som hade den jämnaste könsfördelningen bland samtliga anställda. Vilket var förhållandet kvinnor : män bland cheferna i detta län?</p>
+                <form id="dkt-fraga31">
+                    <label>
+                        <input type="radio" name="svar31" value="A"> A) 1:1
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar31" value="B"> B) 1:2
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar31" value="C"> C) 1:3
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar31" value="D"> D) 1:4
+                    </label><br>
+                </form>
+                <button id="dkt-knapp31" onclick="rättaFlervalsSvar('dkt-fraga31', 'feedback-dkt31', 'B', 'dkt-knapp31')">Kontrollera svar</button>
+                <p id="feedback-dkt31"></p>               
             </div>
-                
-
-            <!-- Lägg till fler övningar nedan -->
             <div class="övning">
-                <h3> Övning två</h3>
-                <img src="Bilder\placeholder.png" alt="Bild">
-                <p>Vad är 100 * 62?</p>
-                <input type="number" id="svar4-2" placeholder="Skriv ditt svar här">
-                <button id="knapp4-2" onclick="rättaSvar('svar4-2', 'feedback4-2', 6200, 'knapp4-2')">Kontrollera svar</button>
-                <p id="feedback4-2"></p>
+                <h3>Hushållens storlek under 1900-talet</h3>
+                <img src="Bilder/DTK323334.png" alt="Diagram över hushållens storlek under 1900-talet">
+            
+                <h3>Uppgifter</h3>
+            
+                <h3>32.</h3>
+                <p>Studera hur andelen hushåll med 3 personer har förändrats. Mellan vilka av nedanstående år skedde den största förändringen, i procentenheter räknat?</p>
+                <form id="hushall-fraga32">
+                    <label>
+                        <input type="radio" name="svar32" value="A"> A) 1920 och 1930
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar32" value="B"> B) 1930 och 1945
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar32" value="C"> C) 1945 och 1950
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar32" value="D"> D) 1970 och 1980
+                    </label><br>
+                </form>
+                <button id="hushall-knapp32" onclick="rättaFlervalsSvar('hushall-fraga32', 'feedback-hushall32', 'B', 'hushall-knapp32')">Kontrollera svar</button>
+                <p id="feedback-hushall32"></p><br>
+            
+                <h3>33.</h3>
+                <p>År 1980 fanns det cirka 3 498 000 hushåll i Sverige. Hur många hade hushållsstorleken 2 personer?</p>
+                <form id="hushall-fraga33">
+                    <label>
+                        <input type="radio" name="svar33" value="A"> A) 1 100 000
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar33" value="B"> B) 1 400 000
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar33" value="C"> C) 1 700 000
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar33" value="D"> D) 2 300 000
+                    </label><br>
+                </form>
+                <button id="hushall-knapp33" onclick="rättaFlervalsSvar('hushall-fraga33', 'feedback-hushall33', 'A', 'hushall-knapp33')">Kontrollera svar</button>
+                <p id="feedback-hushall33"></p><br>
+            
+                <h3>34.</h3>
+                <p>Jämför 1910 och 1990. För vilken hushållsstorlek gällde att dess andel hade förändrats med 33 procentenheter?</p>
+                <form id="hushall-fraga34">
+                    <label>
+                        <input type="radio" name="svar34" value="A"> A) 5+ personer
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar34" value="B"> B) 4 personer
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar34" value="C"> C) 2 personer
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar34" value="D"> D) 1 person
+                    </label><br>
+                </form>
+                <button id="hushall-knapp34" onclick="rättaFlervalsSvar('hushall-fraga34', 'feedback-hushall34', 'D', 'hushall-knapp34')">Kontrollera svar</button>
+                <p id="feedback-hushall34"></p><br>
             </div>
+            <div class="övning">
+                <h3>Store Mosse Nationalpark</h3>
+                <img src="Bilder/DTK353637.png" alt="Diagram över parken">
+                <h3>Uppgifter</h3>
+            
+                <h3>35.</h3>
+                <p>Utgå från fågeltornet som ligger vid Gungflyet. I vilken riktning ligger det andra fågeltornet?</p>
+                <form id="mosse-fraga35">
+                    <label>
+                        <input type="radio" name="svar35" value="A"> A) Sydsydostlig riktning
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar35" value="B"> B) Sydsydvästlig riktning
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar35" value="C"> C) Nordnordvästlig riktning
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar35" value="D"> D) Nordnordostlig riktning
+                    </label><br>
+                </form>
+                <button id="mosse-knapp35" onclick="rättaFlervalsSvar('mosse-fraga35', 'feedback-mosse35', 'D', 'mosse-knapp35')">Kontrollera svar</button>
+                <p id="feedback-mosse35"></p><br>
+            
+                <h3>36.</h3>
+                <p>Hur stort är området som har tillträdesförbud perioden mars–september?</p>
+                <form id="mosse-fraga36">
+                    <label>
+                        <input type="radio" name="svar36" value="A"> A) 3 km²
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar36" value="B"> B) 7 km²
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar36" value="C"> C) 11 km²
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar36" value="D"> D) 15 km²
+                    </label><br>
+                </form>
+                <button id="mosse-knapp36" onclick="rättaFlervalsSvar('mosse-fraga36', 'feedback-mosse36', 'B', 'mosse-knapp36')">Kontrollera svar</button>
+                <p id="feedback-mosse36"></p><br>
+            
+                <h3>37.</h3>
+                <p>Utgå från den sydligast belägna parkeringen i området. Följ vandringsleden norrut fram till järnvägen. Hur lång är sträckan?</p>
+                <form id="mosse-fraga37">
+                    <label>
+                        <input type="radio" name="svar37" value="A"> A) 6 km
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar37" value="B"> B) 8 km
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar37" value="C"> C) 11 km
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar37" value="D"> D) 13 km
+                    </label><br>
+                </form>
+                <button id="mosse-knapp37" onclick="rättaFlervalsSvar('mosse-fraga37', 'feedback-mosse37', 'C', 'mosse-knapp37')">Kontrollera svar</button>
+                <p id="feedback-mosse37"></p><br>
+            </div>
+            <div class="övning">
+                <h3>Förskrivning av antibiotika</h3>
+                <img src="Bilder/DTK383940.png" alt="Diagram av förskrivningar">
+                <h3>Uppgifter</h3>
+            
+                <h3>38.</h3>
+                <p>Vilket cirkeldiagram illustrerar förhållandet mellan antalet förskrivningar per tusen kvinnor av nitrofurantoin och fluorokinoloner år 2013?</p>
+                <img src="Bilder/DTK38.png" alt="Tre olika diagram">
+                <form id="antibiotika-fraga38">
+                    <label>
+                        <input type="radio" name="svar38" value="A"> A) Diagram A
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar38" value="B"> B) Diagram B
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar38" value="C"> C) Diagram C
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar38" value="D"> D) Diagram D
+                    </label><br>
+                </form>
+                <button id="antibiotika-knapp38" onclick="rättaFlervalsSvar('antibiotika-fraga38', 'feedback-antibiotika38', 'A', 'antibiotika-knapp38')">Kontrollera svar</button>
+                <p id="feedback-antibiotika38"></p><br>
+            
+                <h3>39.</h3>
+                <p>Hur stor andel av de redovisade antibiotikaförskrivningarna per tusen kvinnor år 2003 avsåg pivmecillinam?</p>
+                <form id="antibiotika-fraga39">
+                    <label>
+                        <input type="radio" name="svar39" value="A"> A) 25 procent
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar39" value="B"> B) 35 procent
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar39" value="C"> C) 50 procent
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar39" value="D"> D) 75 procent
+                    </label><br>
+                </form>
+                <button id="antibiotika-knapp39" onclick="rättaFlervalsSvar('antibiotika-fraga39', 'feedback-antibiotika39', 'A', 'antibiotika-knapp39')">Kontrollera svar</button>
+                <p id="feedback-antibiotika39"></p><br>
+            
+                <h3>40.</h3>
+                <p>År 2011 var antalet kvinnor i åldrarna 18–79 år cirka 3,5 miljoner. Hur många förskrivningar gjordes totalt av de fyra redovisade antibiotikasorterna under detta år?</p>
+                <form id="antibiotika-fraga40">
+                    <label>
+                        <input type="radio" name="svar40" value="A"> A) 145 000
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar40" value="B"> B) 350 000
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar40" value="C"> C) 510 000
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar40" value="D"> D) 675 000
+                    </label><br>
+                </form>
+                <button id="antibiotika-knapp40" onclick="rättaFlervalsSvar('antibiotika-fraga40', 'feedback-antibiotika40', 'C', 'antibiotika-knapp40')">Kontrollera svar</button>
+                <p id="feedback-antibiotika40"></p><br>
+            </div>
+            
+            
+            
+            
 
         </section>
     </main>

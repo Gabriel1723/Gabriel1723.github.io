@@ -9,7 +9,7 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 </head>
-<body>
+<body data-page="KVA">
     <header>
         <h1>KVA</h1>
         <nav>
@@ -22,44 +22,249 @@
             <h2>Det kvantitativa delen</h2>
             <p>Består av 10 uppgifter, som alla presenterar ett matematiskt problem och därefter två alternativa svar. Du ska bestämma vilket av alternativen som är störst, om de är lika stora eller om du inte har tillräckligt med information för att bedöma detta.</p>
             <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
-            <h1 id="timer">120</h1>
+            <h1 id="timer">10 min</h1>
             <div id="poängDisplay">Poäng: 0</div>
         </section>
 
-        <section id="övningar">
+        <section id="övningar" class="hidden"> 
             <h2>Matteövningar</h2>
 
             <div class="övning">
-                <h3>Övning ett</h3>
-                <p>Linjen \( L \) går genom punkten \( (-10, -1) \) och har positiv lutning.</p>
-                <p><strong>Kvantitet I:</strong> y-koordinaten för den punkt där \( L \) skär y-axeln.</p>
-                <p><strong>Kvantitet II:</strong> 0</p>
-                <form id="kva-fraga1">
+                <h3>Övning tretton</h3>
+                <p><strong>Kvantitet I:</strong> \( \frac{707}{70} \)<br>
+                    <strong>Kvantitet II:</strong> \( \frac{808}{80} \)</p>
+                <form id="kva-fraga13">
                     <label>
-                        <input type="radio" name="svar1" value="A"> A) I är större än II
+                        <input type="radio" name="svar13" value="A"> A) I är större än II
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="B"> B) II är större än I
+                        <input type="radio" name="svar13" value="B"> B) II är större än I
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="C"> C) I är lika med II
+                        <input type="radio" name="svar13" value="C"> C) I är lika med II
                     </label><br>
                     <label>
-                        <input type="radio" name="svar1" value="D"> D) Informationen är otillräcklig
+                        <input type="radio" name="svar13" value="D"> D) Informationen är otillräcklig
                     </label><br>
                 </form>
-                <button id="kva-knapp1" onclick="rättaFlervalsSvar('kva-fraga1', 'kva-feedback1', 'A', 'kva-knapp1')">Kontrollera svar</button>
-                <p id="kva-feedback1"></p>
+                <button id="kva-knapp13" onclick="rättaFlervalsSvar('kva-fraga13', 'kva-feedback13', 'C', 'kva-knapp13')">Kontrollera svar</button>
+                <p id="kva-feedback13"></p>
             </div>
-
-            <!-- Lägg till fler övningar nedan -->
             <div class="övning">
-                <h3> Övning två</h3>
-                <p>Vad är 55 - 15?</p>
-                <input type="number" id="svar2-2" placeholder="Skriv ditt svar här">
-                <button id="knapp2-1" onclick="rättaSvar('svar2-2', 'feedback2-2', 40, 'knapp2-2')">Kontrollera svar</button>
-                <p id="feedback2-2"></p>
+                <h3>Övning fjorton</h3>
+                <p>De fyra punkterna \( A, B, C \) och \( D \) är placerade i samma koordinatsystem:</p>
+                <p>
+                    \( A = (0, 0) \)<br>
+                    \( B = (4, 3) \)<br>
+                    \( C = (8, 0) \)<br>
+                    \( D = (8, 1) \)
+                </p>
+                <img src="Bilder\KVA14.png" alt="Bild">
+                <p><strong>Kvantitet I:</strong> Den sammanlagda längden av sträckorna AB och BC</p>
+                <p><strong>Kvantitet II:</strong> Längden av sträckan AD</p>
+                <form id="kva-fraga14">
+                    <label>
+                        <input type="radio" name="svar14" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar14" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar14" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar14" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="kva-knapp14" onclick="rättaFlervalsSvar('kva-fraga14', 'kva-feedback14', 'A', 'kva-knapp14')">Kontrollera svar</button>
+                <p id="kva-feedback14"></p>
             </div>
+            <div class="övning">
+                <h3>Övning femton</h3>
+                <p><strong>Kvantitet I:</strong> Volymen av en cylinder med höjden 5 cm och radien 2 cm</p>
+                <p><strong>Kvantitet II:</strong> Volymen av en cylinder med höjden 2 cm och radien 5 cm</p>
+                <form id="kva-fraga15">
+                    <label>
+                        <input type="radio" name="svar15" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar15" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar15" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar15" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="kva-knapp15" onclick="rättaFlervalsSvar('kva-fraga15', 'kva-feedback15', 'B', 'kva-knapp15')">Kontrollera svar</button>
+                <p id="kva-feedback15"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning sexton</h3>
+                <p>\( \frac{x}{3} - \frac{1}{5} = \frac{1}{3} + \frac{1}{5} \)</p>
+                <p><strong>Kvantitet I:</strong> \( x \)</p>
+                <p><strong>Kvantitet II:</strong> 2</p>
+                <form id="kva-fraga16">
+                    <label>
+                        <input type="radio" name="svar16" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar16" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar16" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar16" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="kva-knapp16" onclick="rättaFlervalsSvar('kva-fraga16', 'kva-feedback16', 'A', 'kva-knapp16')">Kontrollera svar</button>
+                <p id="kva-feedback16"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning sjutton</h3>
+                <p>\( 3 < p < 5 \)</p>
+                <p><strong>Kvantitet I:</strong> \( p^3 \)</p>
+                <p><strong>Kvantitet II:</strong> \( 42p \)</p>
+                <form id="kva-fraga17">
+                    <label>
+                        <input type="radio" name="svar17" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar17" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar17" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar17" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="kva-knapp17" onclick="rättaFlervalsSvar('kva-fraga17', 'kva-feedback17', 'B', 'kva-knapp17')">Kontrollera svar</button>
+                <p id="kva-feedback17"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning arton</h3>
+                <p>En påse innehåller endast 9 enfärgade kulor: 5 röda och 4 blå. Albin plockar slumpmässigt två kulor ur påsen. Han plockar dem en och en utan att lägga tillbaka dem.</p>
+                <p><strong>Kvantitet I:</strong> Sannolikheten att Albin först plockar en röd kula och sedan en blå kula</p>
+                <p><strong>Kvantitet II:</strong> Sannolikheten att Albin först plockar en röd kula och sedan ytterligare en röd kula</p>
+                <form id="kva-fraga18">
+                    <label>
+                        <input type="radio" name="svar18" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar18" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar18" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar18" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="kva-knapp18" onclick="rättaFlervalsSvar('kva-fraga18', 'kva-feedback18', 'C', 'kva-knapp18')">Kontrollera svar</button>
+                <p id="kva-feedback18"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning nitton</h3>
+                <p>\( 36^{\frac{1}{3}} = 6^{2x} \)</p>
+                <p><strong>Kvantitet I:</strong> \( x \)</p>
+                <p><strong>Kvantitet II:</strong> \( \frac{2}{5} \)</p>
+                <form id="kva-fraga19">
+                    <label>
+                        <input type="radio" name="svar19" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar19" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar19" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar19" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="kva-knapp19" onclick="rättaFlervalsSvar('kva-fraga19', 'kva-feedback19', 'B', 'kva-knapp19')">Kontrollera svar</button>
+                <p id="kva-feedback19"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning tjugo</h3>
+                <p>Summan av fem på varandra följande heltal är 15.</p>
+                <p><strong>Kvantitet I:</strong> Skillnaden mellan det största och det minsta talet</p>
+                <p><strong>Kvantitet II:</strong> 5</p>
+                <form id="kva-fraga20">
+                    <label>
+                        <input type="radio" name="svar20" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar20" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar20" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar20" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="kva-knapp20" onclick="rättaFlervalsSvar('kva-fraga20', 'kva-feedback20', 'B', 'kva-knapp20')">Kontrollera svar</button>
+                <p id="kva-feedback20"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning tjugoett</h3>
+                <p>\( n \) är ett heltal sådant att \( -10 \leq n \leq 10 \).</p>
+                <p><strong>Kvantitet I:</strong> \( 10^{n} \)</p>
+                <p><strong>Kvantitet II:</strong> \( n^{10} \)</p>
+                <form id="kva-fraga21">
+                    <label>
+                        <input type="radio" name="svar21" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar21" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar21" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar21" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="kva-knapp21" onclick="rättaFlervalsSvar('kva-fraga21', 'kva-feedback21', 'D', 'kva-knapp21')">Kontrollera svar</button>
+                <p id="kva-feedback21"></p>
+            </div>
+            <div class="övning">
+                <h3>Övning tjugotvå</h3>
+                <p>\( R \) är en rektangel.</p>
+                <p>\( x > a \)</p>
+                <img src="Bilder\KVA22.png" alt="Bild">
+                <p><strong>Kvantitet I:</strong> Arean av \( R \) om \( a = 0 \)</p>
+                <p><strong>Kvantitet II:</strong> Arean av \( R \) om \( a > 0 \)</p>
+                <form id="kva-fraga22">
+                    <label>
+                        <input type="radio" name="svar22" value="A"> A) I är större än II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar22" value="B"> B) II är större än I
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar22" value="C"> C) I är lika med II
+                    </label><br>
+                    <label>
+                        <input type="radio" name="svar22" value="D"> D) Informationen är otillräcklig
+                    </label><br>
+                </form>
+                <button id="kva-knapp22" onclick="rättaFlervalsSvar('kva-fraga22', 'kva-feedback22', 'A', 'kva-knapp22')">Kontrollera svar</button>
+                <p id="kva-feedback22"></p>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
         </section>
     </main>
