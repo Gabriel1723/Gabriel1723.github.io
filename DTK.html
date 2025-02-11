@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DTK</title>
     <link rel="stylesheet" href="main.css">
-    <script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body data-page="DTK">
     <header>
@@ -21,21 +19,17 @@
             <h2>Diagramdelen</h2>
             <p>Består av 12 uppgifter som är kopplade till olika kartor, tabeller och diagram och uppgifterna går att lösa genom att läsa av dessa samt göra diverse uträkningar.</p>
             <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
-            <h1 id="timer">23 min</h1>
+            <div id="timer">23 min</div>
             <div id="poängDisplay">Poäng: 0</div>
         </section>
-
         <section id="övningar" class="hidden"> 
             <h2>Matteövningar</h2>
-
             <div class="övning">
                 <h3>Kvinnor och män i näringslivet</h3><br>
                 <p>Antalet chefer respektive samtliga anställda inom privat sektor 2012, uppdelat på kvinnor och män
                     samt på län.</p>
-                <img src="Bilder/DTK293031.png" alt="Diagram över könsfördelning bland chefer och anställda">
-            
+                <img src="Bilder/DTK293031.png" alt="Diagram över könsfördelning bland chefer och anställda">      
                 <h3>Uppgifter</h3>
-            
                 <h3>29.</h3>
                 <p>Hur många av länen hade en större andel kvinnliga chefer än riket som helhet?</p>
                 <form id="dkt-fraga29">
@@ -53,8 +47,7 @@
                     </label><br>
                 </form>
                 <button id="dkt-knapp29" onclick="rättaFlervalsSvar('dkt-fraga29', 'feedback-dkt29', 'B', 'dkt-knapp29')">Kontrollera svar</button>
-                <p id="feedback-dkt29"></p><br>
-            
+                <p id="feedback-dkt29"></p><br>           
                 <h3>30.</h3>
                 <p>Studera Gävleborgs län. Hur stor var skillnaden mellan andelen män bland samtliga anställda och andelen män bland chefer?</p>
                 <form id="dkt-fraga30">
@@ -72,8 +65,7 @@
                     </label><br>
                 </form>
                 <button id="dkt-knapp30" onclick="rättaFlervalsSvar('dkt-fraga30', 'feedback-dkt30', 'D', 'dkt-knapp30')">Kontrollera svar</button>
-                <p id="feedback-dkt30"></p><br>
-            
+                <p id="feedback-dkt30"></p><br>           
                 <h3>31.</h3>
                 <p>Identifiera länet som hade den jämnaste könsfördelningen bland samtliga anställda. Vilket var förhållandet kvinnor : män bland cheferna i detta län?</p>
                 <form id="dkt-fraga31">
@@ -95,10 +87,8 @@
             </div>
             <div class="övning">
                 <h3>Hushållens storlek under 1900-talet</h3>
-                <img src="Bilder/DTK323334.png" alt="Diagram över hushållens storlek under 1900-talet">
-            
+                <img src="Bilder/DTK323334.png" alt="Diagram över hushållens storlek under 1900-talet">           
                 <h3>Uppgifter</h3>
-            
                 <h3>32.</h3>
                 <p>Studera hur andelen hushåll med 3 personer har förändrats. Mellan vilka av nedanstående år skedde den största förändringen, i procentenheter räknat?</p>
                 <form id="hushall-fraga32">
@@ -116,8 +106,7 @@
                     </label><br>
                 </form>
                 <button id="hushall-knapp32" onclick="rättaFlervalsSvar('hushall-fraga32', 'feedback-hushall32', 'B', 'hushall-knapp32')">Kontrollera svar</button>
-                <p id="feedback-hushall32"></p><br>
-            
+                <p id="feedback-hushall32"></p><br>           
                 <h3>33.</h3>
                 <p>År 1980 fanns det cirka 3 498 000 hushåll i Sverige. Hur många hade hushållsstorleken 2 personer?</p>
                 <form id="hushall-fraga33">
@@ -135,8 +124,7 @@
                     </label><br>
                 </form>
                 <button id="hushall-knapp33" onclick="rättaFlervalsSvar('hushall-fraga33', 'feedback-hushall33', 'A', 'hushall-knapp33')">Kontrollera svar</button>
-                <p id="feedback-hushall33"></p><br>
-            
+                <p id="feedback-hushall33"></p><br>            
                 <h3>34.</h3>
                 <p>Jämför 1910 och 1990. För vilken hushållsstorlek gällde att dess andel hade förändrats med 33 procentenheter?</p>
                 <form id="hushall-fraga34">
@@ -159,8 +147,7 @@
             <div class="övning">
                 <h3>Store Mosse Nationalpark</h3>
                 <img src="Bilder/DTK353637.png" alt="Diagram över parken">
-                <h3>Uppgifter</h3>
-            
+                <h3>Uppgifter</h3>            
                 <h3>35.</h3>
                 <p>Utgå från fågeltornet som ligger vid Gungflyet. I vilken riktning ligger det andra fågeltornet?</p>
                 <form id="mosse-fraga35">
@@ -178,8 +165,7 @@
                     </label><br>
                 </form>
                 <button id="mosse-knapp35" onclick="rättaFlervalsSvar('mosse-fraga35', 'feedback-mosse35', 'D', 'mosse-knapp35')">Kontrollera svar</button>
-                <p id="feedback-mosse35"></p><br>
-            
+                <p id="feedback-mosse35"></p><br>            
                 <h3>36.</h3>
                 <p>Hur stort är området som har tillträdesförbud perioden mars–september?</p>
                 <form id="mosse-fraga36">
@@ -197,8 +183,7 @@
                     </label><br>
                 </form>
                 <button id="mosse-knapp36" onclick="rättaFlervalsSvar('mosse-fraga36', 'feedback-mosse36', 'B', 'mosse-knapp36')">Kontrollera svar</button>
-                <p id="feedback-mosse36"></p><br>
-            
+                <p id="feedback-mosse36"></p><br>           
                 <h3>37.</h3>
                 <p>Utgå från den sydligast belägna parkeringen i området. Följ vandringsleden norrut fram till järnvägen. Hur lång är sträckan?</p>
                 <form id="mosse-fraga37">
@@ -221,8 +206,7 @@
             <div class="övning">
                 <h3>Förskrivning av antibiotika</h3>
                 <img src="Bilder/DTK383940.png" alt="Diagram av förskrivningar">
-                <h3>Uppgifter</h3>
-            
+                <h3>Uppgifter</h3>           
                 <h3>38.</h3>
                 <p>Vilket cirkeldiagram illustrerar förhållandet mellan antalet förskrivningar per tusen kvinnor av nitrofurantoin och fluorokinoloner år 2013?</p>
                 <img src="Bilder/DTK38.png" alt="Tre olika diagram">
@@ -241,8 +225,7 @@
                     </label><br>
                 </form>
                 <button id="antibiotika-knapp38" onclick="rättaFlervalsSvar('antibiotika-fraga38', 'feedback-antibiotika38', 'A', 'antibiotika-knapp38')">Kontrollera svar</button>
-                <p id="feedback-antibiotika38"></p><br>
-            
+                <p id="feedback-antibiotika38"></p><br>            
                 <h3>39.</h3>
                 <p>Hur stor andel av de redovisade antibiotikaförskrivningarna per tusen kvinnor år 2003 avsåg pivmecillinam?</p>
                 <form id="antibiotika-fraga39">
@@ -261,7 +244,6 @@
                 </form>
                 <button id="antibiotika-knapp39" onclick="rättaFlervalsSvar('antibiotika-fraga39', 'feedback-antibiotika39', 'A', 'antibiotika-knapp39')">Kontrollera svar</button>
                 <p id="feedback-antibiotika39"></p><br>
-            
                 <h3>40.</h3>
                 <p>År 2011 var antalet kvinnor i åldrarna 18–79 år cirka 3,5 miljoner. Hur många förskrivningar gjordes totalt av de fyra redovisade antibiotikasorterna under detta år?</p>
                 <form id="antibiotika-fraga40">
@@ -281,20 +263,12 @@
                 <button id="antibiotika-knapp40" onclick="rättaFlervalsSvar('antibiotika-fraga40', 'feedback-antibiotika40', 'C', 'antibiotika-knapp40')">Kontrollera svar</button>
                 <p id="feedback-antibiotika40"></p><br>
             </div>
-            
-            
-            
-            
-
         </section>
     </main>
-
     <hr>
-
     <footer>
         <p>&copy; 2024 Matteövningar. Alla rättigheter reserverade.</p>
     </footer>
-
     <script src="main.js"></script>
 </body>
 </html>

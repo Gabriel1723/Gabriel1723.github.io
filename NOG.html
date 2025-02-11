@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOG</title>
     <link rel="stylesheet" href="main.css">
-    <script type="text/javascript" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body data-page="NOG">
     <header>
@@ -16,21 +14,17 @@
             <a href="index.html">Hem</a>
         </nav>
     </header>
-
     <main>
         <section id="intro">
             <h2>Resonemang delen</h2>
             <p>Består av 6 uppgifter, som alla presenterar ett problem följt av två påståenden. Här gäller det att avgöra om den information som påståendena ger är tillräcklig för att problemet ska kunna lösas.</p>
             <button id="borja" onclick="setTimeout(timerFunktion, 3000)">Börja timern</button>
-            <h1 id="timer">10 min</h1>
-            <div id="poängDisplay">Poäng: 0</div>
+            <div id="timer">10 min</div>
         </section>
-
         <section id="övningar" class="hidden"> 
             <h2>Matteövningar</h2>
-
             <div class="övning">
-                <h3>Övning tjugotre</h3>
+                <h3>23.</h3>
                 <p>Malin har en påse med äpplen. Hur många äpplen finns det i påsen?</p>
                 <p><strong>(1)</strong> Om Malin lägger ner ytterligare två äpplen i påsen så utgör dessa två äpplen \( \frac{1}{12} \) av antalet äpplen i påsen.</p>
                 <p><strong>(2)</strong> Om Malin plockar bort två äpplen ur påsen så minskar antalet äpplen i påsen med \( \frac{1}{11} \).</p>
@@ -55,7 +49,7 @@
                 <p id="feedback-nog23"></p>
             </div>
             <div class="övning">
-                <h3>Övning tjugofyra</h3>
+                <h3>24.</h3>
                 <p>I ett val ställde två kandidater upp. Alla valsedlar var giltiga, och varje röst lades på någon av de två kandidaterna. Hur många röster lades i valet?</p>
                 <p><strong>(1)</strong> Den kandidat som vann valet fick \( 56 \% \) av rösterna.</p>
                 <p><strong>(2)</strong> Den kandidat som vann valet fick 1200 röster fler än den som förlorade.</p>
@@ -80,7 +74,7 @@
                 <p id="feedback-nog24"></p>
             </div>
             <div class="övning">
-                <h3>Övning tjugofem</h3>
+                <h3>25.</h3>
                 <p>Alexandra, Benjamin, Julia och Sebastian är syskon. Vilket av syskonen är yngst?</p>
                 <p><strong>(1)</strong> Benjamin är äldre än Alexandra. Julia är dubbelt så gammal som Sebastian.</p>
                 <p><strong>(2)</strong> Sebastian är 5 år och Benjamin är 12 år.</p>
@@ -105,7 +99,7 @@
                 <p id="feedback-nog25"></p>
             </div>
             <div class="övning">
-                <h3>Övning tjugosex</h3>
+                <h3>26.</h3>
                 <p>Fyra nycklar är numrerade 1, 2, 3, 4. Var och en av nycklarna passar i ett av fyra lås som också är numrerade 1, 2, 3, 4. Vilken nyckel passar i vilket lås?</p>
                 <p><strong>(1)</strong> Ingen nyckel har samma nummer som det lås den passar i.</p>
                 <p><strong>(2)</strong> Summan av låsets och nyckelns nummer är densamma för varje par av lås och passande nyckel.</p>
@@ -130,7 +124,7 @@
                 <p id="feedback-nog26"></p>
             </div>
             <div class="övning">
-                <h3>Övning tjugosju</h3>
+                <h3>27.</h3>
                 <p>En cirkelformad pizza delas i sex likadana bitar i form av cirkelsektorer. Hur stor är pizzans omkrets?</p>
                 <p><strong>(1)</strong> Arean av varje bit är \( 96 \pi \, \text{cm}^2 \).</p>
                 <p><strong>(2)</strong> Cirkelbågen på varje bit är \( 8 \pi \, \text{cm} \).</p>
@@ -155,7 +149,7 @@
                 <p id="feedback-nog27"></p>
             </div>
             <div class="övning">
-                <h3>Övning tjugoåtta</h3>
+                <h3>28.</h3>
                 <p>Bo ställer sig sist i en kö för att åka berg- och dalbana. Efter 10 minuter står det 100 personer i kön. Hur många personer står före Bo i kön vid denna tidpunkt?</p>
                 <p><strong>(1)</strong> Sedan Bo ställde sig i kön har antalet personer före honom i kön minskat med 55.</p>
                 <p><strong>(2)</strong> Sedan Bo ställde sig i kön har antalet personer efter honom i kön ökat med 36.</p>
@@ -179,22 +173,12 @@
                 <button id="nog-knapp28" onclick="rättaFlervalsSvar('nog-fraga28', 'feedback-nog28', 'B', 'nog-knapp28')">Kontrollera svar</button>
                 <p id="feedback-nog28"></p>
             </div>
-            
-            
-            
-            
-            
-
-
         </section>
     </main>
-
     <hr>
-
     <footer>
         <p>&copy; 2024 Matteövningar. Alla rättigheter reserverade.</p>
     </footer>
-
     <script src="main.js"></script>
 </body>
 </html>

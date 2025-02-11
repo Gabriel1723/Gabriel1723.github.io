@@ -134,6 +134,7 @@ function rättaFlervalsSvar(formId, feedbackId, rättSvar, knappId) {
             feedback.textContent = "Rätt svar! +1 poäng";
             poäng++;
             localStorage.setItem('poäng', poäng);
+            visaPoäng();
         } else {
             feedback.textContent = "Fel svar. Försök igen nästa gång!";
         }

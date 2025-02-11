@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XYZ</title>
     <link rel="stylesheet" href="main.css">
-    <script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body data-page="XYZ">
     <header>
@@ -16,22 +14,17 @@
             <a href="index.html">Hem</a>
         </nav>
     </header>
-
-
     <main>
         <section id="intro">
             <h2>Mattedelen</h2>
-            <p>Består av 12 uppgifter som alla är mattetal där du ska ge ett exakt svar. Du har fyra svarsalternativ till varje uppgift. Du har ungefär en minut till varje uppgift.</p>
+            <p>Består av 12 uppgifter. Du har fyra svarsalternativ till varje uppgift.</p>
             <button id="borja">Börja timern</button>
-            <h1 id="timer">12 min.</h1>
-            <div id="poängDisplay">Poäng: 0</div>
+            <div id="timer">12 min.</div>
         </section>
-
           <section id="övningar" class="hidden"> 
             <h2>Matteövningar</h2>
-        
             <div class="övning">
-                <h3>Övning ett</h3>
+                <h3>1.</h3>
                 <p> \( x - 7 = 3(x + 1) \) <br> 
                     Vilket värde har \( x \)? 
                 </p>
@@ -53,8 +46,8 @@
                 <p id="feedback1"></p>
             </div>
             <div class="övning">
-                <h3>Övning två</h3>
-                <img src="Bilder\XYZ2.png" alt="Bild">
+                <h3>2.</h3>
+                <img src="Bilder/XYZ2.png" alt="Bild">
                 <p>Vad är \( x + y \)?</p>
                 <form id="fraga2">
                     <label>
@@ -74,7 +67,7 @@
                 <p id="feedback2"></p>
             </div>
             <div class="övning">
-                <h3>Övning tre</h3>
+                <h3>3.</h3>
                 <p>Vad är medelvärdet av \( 8^2 \) och \( 4^2 \)?</p>
                 <form id="fraga3">
                     <label>
@@ -94,7 +87,7 @@
                 <p id="feedback3"></p>
             </div>
             <div class="övning">
-                <h3>Övning fyra</h3>
+                <h3>4.</h3>
                 <p>\( f(x) = 3x - 1 \) <br> \( g(x) = -2f(x) + 4 \)<br>Vilket svarsalternativ är lika med \( g(1) \)?</p>
                 <form id="fraga4">
                     <label>
@@ -114,7 +107,7 @@
                 <p id="feedback4"></p>
             </div>
             <div class="övning">
-                <h3>Övning fem</h3>
+                <h3>5.</h3>
                 <p>\( \frac{\frac{2}{5} - \frac{1}{4}}{\frac{1}{3} + \frac{1}{6}} \)<br>Vilket svarsalternativ är lika med detta uttryck?</p>
                 <form id="fraga5">
                     <label>
@@ -134,7 +127,7 @@
                 <p id="feedback5"></p>
             </div>
             <div class="övning">
-                <h3>Övning sex</h3>
+                <h3>6.</h3>
                 <p>Vilket svarsalternativ är lika med ett heltal?</p>
                 <form id="fraga6">
                     <label>
@@ -154,7 +147,7 @@
                 <p id="feedback6"></p>
             </div>
             <div class="övning">
-                <h3>Övning sju</h3>
+                <h3>7.</h3>
                 <p>\( f(x) = a \cdot 3^{x} \)<br>
                 Om \( a \) väljs så att \( f(1) = 3 \), vilket värde har då \( f(0) \) ?</p>
                 <form id="fraga7">
@@ -175,7 +168,7 @@
                 <p id="feedback7"></p>
             </div>
             <div class="övning">
-                <h3>Övning åtta</h3>
+                <h3>8.</h3>
                 <p>\( x y z \neq 0 \)<br>
                 Vilket svarsalternativ motsvarar \( \frac{x^{4} y^{2} z^{3}}{\left(x^{2} y z^{2}\right)^{2}} \) ?</p>
                 <form id="fraga8">
@@ -196,7 +189,7 @@
                 <p id="feedback8"></p>
             </div>
             <div class="övning">
-                <h3>Övning nio</h3>
+                <h3>9.</h3>
                 <p>\( 60 \% \) av \( x \) är lika med \( 40 \% \) av \( y \). Hur många procent av \( \boldsymbol{x} \) är \( \boldsymbol{y} \) ?</p>
                 <form id="fraga9">
                     <label>
@@ -216,7 +209,7 @@
                 <p id="feedback9"></p>
             </div>
             <div class="övning">
-                <h3>Övning tio</h3>
+                <h3>10.</h3>
                 <p>Arean av en kvadrat är \( 100 \, \mathrm{cm}^2 \). Vilket svarsalternativ är närmast längden av kvadratens diagonal?</p>
                 <form id="fraga10">
                     <label>
@@ -236,7 +229,7 @@
                 <p id="feedback10"></p>
             </div>
             <div class="övning">
-                <h3>Övning elva</h3>
+                <h3>11.</h3>
                 <p>\( z = x + y = 5 \)<br>Vad är \( \sqrt{x z + y z} \) ?</p>
                 <form id="fraga11">
                     <label>
@@ -255,8 +248,8 @@
                 <button id="knapp11" onclick="rättaFlervalsSvar('fraga11', 'feedback11', 'B', 'knapp11')">Kontrollera svar</button>
                 <p id="feedback11"></p>
             </div>
-            <div class="övning" class="hidden">
-                <h3>Övning tolv</h3>
+            <div class="övning">
+                <h3>12.</h3>
                 <p>Summan av de 30 första udda positiva heltalen är \( u \). Summan av de 30 första jämna positiva heltalen är \( \boldsymbol{j} \). Vad är \( \boldsymbol{u} - \boldsymbol{j} \) ?</p>
                 <form id="fraga12">
                     <label>
@@ -277,13 +270,10 @@
             </div>
         </section>
     </main>
-
     <hr>
-
     <footer>
         <p>&copy; 2024 Matteövningar. Alla rättigheter reserverade.</p>
     </footer>
-
     <script src="main.js"></script>
 </body>
 </html>

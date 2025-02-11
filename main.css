@@ -71,7 +71,7 @@ main {
   display: none;
 }
 
-#extraKnapp {
+button {
   background-color: var(--button-disabled-bg);
   color: #fff;
   border: none;
@@ -81,7 +81,7 @@ main {
   transition: background-color 0.3s, color 0.3s; 
 }
 
-#extraKnapp:hover {
+button:hover {
   background-color: var(--button-hover-bg); 
   color: #fff; 
 }
@@ -165,16 +165,12 @@ footer {
   padding: 0.5rem 0;
 }
 
-@media (max-width: 768px) {
-  h1 {
-      font-size: 2rem;
-  }
-
-  nav ul {
-      flex-direction: column;
-  }
-
-  nav ul li {
-      margin: 10px 0;
-  }
+#övningar {
+  margin-left: 20%; 
+  width: 60%; 
 }
+
+img {
+  max-width: 650px; 
+}
+
