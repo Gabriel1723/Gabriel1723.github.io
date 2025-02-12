@@ -1,6 +1,7 @@
-let poäng = 0;
+var poäng = 0;
 let timerInterval;
 let timeRemaining;
+
 
 // Hämta element från DOM
 const timerDisplay = document.getElementById('timer');
@@ -16,19 +17,20 @@ const sidaTider = {
     "BONUS": 600
 };
 
+
 // Hämta rätt tid för den aktuella sidan, fallback till "default"
 const selectedTime = sidaTider[currentPage] || sidaTider["default"];
 
 
 // Unika nycklar för localStorage per sida
+const poängKey = `poäng_${currentPage}`;
 const timerStartedKey = `timerStarted_${currentPage}`;
 const timerEndTimeKey = `timerEndTime_${currentPage}`;
 const timerFinishedKey = `timerFinished_${currentPage}`;
 
 window.onload = function () {
     inaktiveraKnappar();
-    visaPoäng();
-    hämtaPoäng();
+    visaTotalPoäng();
     aktiveraKnappVidPoäng();
     visaBildVidPoäng();
     övningarSection.classList.add('hidden');
@@ -72,10 +74,17 @@ function inaktiveraKnappar() {
 
 function aktiveraKnappVidPoäng() {
     const extraKnapp = document.getElementById('extraKnapp');
-    if (poäng >= 35 && extraKnapp) {
+    let totalPoäng = 0;
+
+    for (const sida in sidaTider) {
+        totalPoäng += parseInt(localStorage.getItem(`poäng_${sida}`) || "0", 10);
+    }
+
+    if (totalPoäng >= 35 && extraKnapp) {
         extraKnapp.disabled = false;
     }
 }
+
 
 function aktiveraKnappar() {
     document.querySelectorAll("button").forEach(knapp => {
@@ -132,9 +141,12 @@ function rättaFlervalsSvar(formId, feedbackId, rättSvar, knappId) {
     if (valdaAlternativ) {
         if (valdaAlternativ.value === rättSvar) {
             feedback.textContent = "Rätt svar! +1 poäng";
-            poäng++;
-            localStorage.setItem('poäng', poäng);
-            visaPoäng();
+
+           let sparadPoäng = parseInt(localStorage.getItem(poängKey) || "0", 10);
+            sparadPoäng++;
+            localStorage.setItem(poängKey, sparadPoäng);
+            
+            visaTotalPoäng();
         } else {
             feedback.textContent = "Fel svar. Försök igen nästa gång!";
         }
@@ -146,35 +158,36 @@ function rättaFlervalsSvar(formId, feedbackId, rättSvar, knappId) {
 }
 
 // Hämta och visa poäng
-function hämtaPoäng() {
-    const sparadPoäng = localStorage.getItem('poäng');
-    if (sparadPoäng) {
-        poäng = parseInt(sparadPoäng, 10);
+function visaTotalPoäng() {
+    let totalPoäng = 0;
+    
+    for (const sida in sidaTider) {
+        let sidaPoäng = parseInt(localStorage.getItem(`poäng_${sida}`) || "0", 10);
+        totalPoäng += sidaPoäng;
     }
-    visaPoäng();
+
+    document.getElementById('poängDisplay').textContent = `Total Poäng: ${totalPoäng}`;
 }
 
-function visaPoäng() {
-    const sparadPoäng = localStorage.getItem('poäng');
-    document.getElementById('poängDisplay').textContent = sparadPoäng ? `Poäng: ${sparadPoäng}` : "Poäng: 0";
-}
 
 // Visa bild vid viss poäng
 function visaBildVidPoäng() {
-    const sparadPoäng = localStorage.getItem('poäng');
-    if (sparadPoäng) {
-        const poäng = parseInt(sparadPoäng);
-        if (poäng >= 35) {
+    let totalPoäng = 0;
+    
+    for (const sida in sidaTider) {
+        totalPoäng += parseInt(localStorage.getItem(`poäng_${sida}`) || "0", 10);
+    }
+        if (totalPoäng >= 35) {
             visaBild('bemarkelseSvår');
-        } else if (poäng >= 30) {
+        } else if (totalPoäng >= 30) {
             visaBild('bemarkelse30');
-        } else if (poäng >= 25) {
+        } else if (totalPoäng >= 25) {
             visaBild('bemarkelse25');
-        } else if (poäng >= 20) {
+        } else if (totalPoäng >= 20) {
             visaBild('bemarkelse20');
         }
-    }
 }
+
 
 function visaBild(id) {
     const bild = document.getElementById(id);
